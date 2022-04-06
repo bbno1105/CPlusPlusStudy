@@ -2,10 +2,122 @@
 //
 
 #include <iostream>
+#include <string>
+
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    // 변수
+    /*
+        1) 이름 : testNum  
+        2) 크기 : 4byte  
+        3) 값 : 2.8   
+        4) 메모리주소 : 0000 0075 87AF FA04 (0~F까지 16진수로 되어있다)
+           -> 나중에 포인터 배울 때 자세히 들어감
+           -> 메모리 주소를 알고 있으면 변수명 몰라도 접근할 수 있다.
+    */
+
+    float testNum = 2.8f; // f를 붙이지 않으면 double형으로 인식하기 때문
+    double testNum1 = 2.8;
+
+    cout << "float : " << testNum << endl;
+    cout << "double : " << testNum1 << endl;
+
+    cout << "float size : " << sizeof(testNum) << "byte" << endl;
+    cout << "float memoryAdress : " << &testNum << endl; // 변수 앞에 & 붙여서 메모리 주소를 확인할 수 있다.
+
+
+    
+    // 실습 1. 상대방 이름과 내 이름, 상대방 나이를 입력 받아서 축하메시지를 출력하는 프로그램을 만들어보자.
+    cout << endl; // 구분을 위한 빈칸
+
+    /*
+        예시)
+            상대방 이름을 입력하세요.
+            _홍길동
+
+            본인의 이름을 입력하세요.
+            _안중재
+
+            상대방 나이를 입력하세요.
+            _24
+
+            안중재 : 홍길동님 24살 생일을 축하합니다.
+
+        ▶ 입력하고 출력한다
+        - 입력 : 상대방 이름, 내 이름, 상대방 나이
+                (+) 사용자가 입력할 데이터에 대한 안내 메시지 출력
+        - 출력 : 축하 메시지 : "(내 이름) : (상대방 이름)님 (상대방 나이)살 생일을 축하합니다."
+                데이터 : 내 이름, 상대방 이름, 상대방 나이
+    */
+
+    /*
+        ☆★☆★☆★☆★☆★ 변수형 이름 규칙 ☆★☆★☆★☆★☆★
+
+
+        1. C++에서 사용하는 키워드들은 변수명으로 사용할 수 없다.
+           int float = 3.4f (X)
+        
+        2. 알파벳, 숫자, _ 로만 구성할 수 있다.
+           int num_3 = 3;
+
+           2-1) 숫자로 변수명을 시작할 수는 없다
+                int 3_num = 3; (X)
+
+        3. 대/소문자 구분을 한다.
+           int num; int Num; 
+           num =! Num
+
+        4. 변수명 사이에는 띄어쓰기를 넣을 수 없다.
+           int n um = 3; (X)
+
+        5. 전부 소문자로 작성한다.
+        
+        6. (과도한) 축약어를 쓰지 않는다.
+           int num; (O)
+           int n; (X) 변수명만으로 알아보기 힘들다.
+
+           헝가리안 표기법
+           카멜 표기법
+
+        ☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★
+    */
+
+    int _3num = 3;
+
+    string sangdaeName; // string sangdaeName, myName 이렇게 한 번에 두개의 변수 선언이 가능하다.
+    int sangdaeAge;
+    string myName;
+
+    cout << "상대방 이름을 입력하세요." << endl;
+    cin >> sangdaeName;
+
+    cout << "\n" << "본인의 이름을 입력하세요." << endl;
+    cin >> myName;
+
+    cout << "\n" << "상대방 나이를 입력하세요." << endl;
+    cin >> sangdaeAge;
+
+    cout << "\n" << myName << " : " << sangdaeName << "님 " << sangdaeAge << "살 생일을 축하합니다." << endl;
+
+    /*
+        H/W 오늘의 과제
+
+        1. 자기 자신을 분석해서
+        2. 여러가지 타입의 변수로 정의한다
+
+        예) 
+            이름 : ...
+            나이 : ...
+            키 : ...
+            혈액형 : ...
+            MBTI : ...
+
+        총 20개의 변수를 정의하기
+    */
+
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
