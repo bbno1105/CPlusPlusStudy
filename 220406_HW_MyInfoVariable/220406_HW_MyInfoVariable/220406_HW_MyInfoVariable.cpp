@@ -55,26 +55,24 @@ int main()
     int age = 32;
     int birthMonth = 11;
     int birthDay = 5;
-    float height = 174.0f;
+    float height = 174.2f;
 
     string bloodType = "O";
-    string mbti = "INTJ";
-    string homeAdress_state = "경기도";
-    string homeAdress_city = "광주시";
+    string MBTI = "INTJ";
+    string homeAddressState = "경기도";
+    string homeAddressCity = "광주시";
     float commutingTime = 1.5f;
 
-    string phoneAdress = "010-3159-5663";
-    string mailAdress = "bbno1105@gmail.com";
-    string blogAdress = "bbno.tistory.com";
+    string phoneAddress = "010-3159-5663";
+    string mailAddress = "bbno1105@gmail.com";
+    string blogAddress = "bbno.tistory.com";
     string favoriteFood = "초밥";
     string leastFavoriteFood = "매운음식";
 
-
-
     string developerName = "BBNO";
-    string developerMailAdress = "bbnoproject@gmail.com";
+    string developerMailAddress = "bbnoproject@gmail.com";
     string gameName = "슬라임 여행기";
-    string gameDownloadAdress = "play.google.com/store/apps/details?id=com.BBNO.SlimeWalker";
+    string gameDownloadAddress = "play.google.com/store/apps/details?id=com.BBNO.SlimeWalker";
     float projectDuration = 6.0f;
 
 
@@ -85,21 +83,21 @@ int main()
     std::cout << "키 : " << height << "cm" << endl;
 
     std::cout << "혈액형 : " << bloodType << endl;
-    std::cout << "MBTI : " << mbti << endl;
-    std::cout << "사는 지역 : " << homeAdress_state << " " << homeAdress_city << endl;
+    std::cout << "MBTI : " << MBTI << endl;
+    std::cout << "사는 지역 : " << homeAddressState << " " << homeAddressCity << endl;
     std::cout << "통학시간 : " << commutingTime << "시간" << endl;
 
     
-    std::cout << "핸드폰 번호 : " << phoneAdress << endl;
-    std::cout << "메일 주소 : " << mailAdress << endl;
-    std::cout << "블로그 주소 : " << blogAdress << endl;
+    std::cout << "핸드폰 번호 : " << phoneAddress << endl;
+    std::cout << "메일 주소 : " << mailAddress << endl;
+    std::cout << "블로그 주소 : " << blogAddress << endl;
     
 
 
     std::cout << "개발자 이름 : " << developerName << endl;
-    std::cout << "개발자 메일 : " << developerMailAdress << endl;
+    std::cout << "개발자 메일 : " << developerMailAddress << endl;
     std::cout << "출시한 게임 : " << gameName << endl;
-    std::cout << "다운로드 주소 : " << gameDownloadAdress << endl;
+    std::cout << "다운로드 주소 : " << gameDownloadAddress << endl;
     std::cout << "개발 기간 : " << projectDuration << "개월" << endl;
 
 
