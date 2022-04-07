@@ -7,6 +7,31 @@
 
 using namespace std;
 
+void addition(int a, int b)
+{
+    cout << "14 += 3 (2) : " << (a += b) << endl;
+}
+
+void subtraction(int a, int b)
+{
+    cout << "14 -= 3 (2) : " << (a -= b) << endl;
+}
+
+void multiplication(int a, int b)
+{
+    cout << "14 *= 3 (2) : " << (a *= b) << endl;
+}
+
+void division(int a, int b)
+{
+    cout << "14 /= 3 (2) : " << (a /= b) << endl;
+}
+
+void remain(int a, int b)
+{
+    cout << "14 %= 3 (2) : " << (a %= b) << endl;
+}
+
 int main()
 {
     // 변수
@@ -118,7 +143,112 @@ int main()
         총 20개의 변수를 정의하기
     */
 
+
+
+    /*
+        연산자
+        데이터를 가공(연산)하는 모든 명령어에 필요한 것들
+        1) 어떤 종류의 연산자들이 있는지?
+        2) 우선 순위 : 어떤 순서로 연산이 진행되는지?
+        3) 결합 순서 : 좌측부터 연산하는 연산자, 우측부터 연산하는 연산자
+
+        1. 사칙연산 : 산술연산자 (좌측부터 연산)
+        
+        + : 더하기
+        - : 빼기
+        * : 곱하기
+        / : 나누기  11 / 3 = 3;
+        % : 나머지  11 % 3 = 2;
+
+        우선순위 : *,/,% > +, -
+
+        2. 대입연산자 (우측부터 연산)
+        = : 왼쪽 항에 오른쪽 항의 값을 대입한다.(복사한다)
+
+        3. 복합대입연산자
+        += : a += b;    =>    a = a + b;
+        -= : a -= b;    =>    a = a - b;
+        *= : a *= b;    =>    a = a * b;
+        /= : a /= b;    =>    a = a / b;
+        %= : a %= b;    =>    a = a % b;  (a와 b는 정수형 타입이어야 한다)
+        
+        4. 증감연산자
+        특정 변수의 값을 1씩 증가시키거나 감소시킬 때 사용한다.
+        변수의 앞이나 뒤에 ++ / -- 를 붙어서 사용한다.
+
+        5. 관계연산자
+        두 값을 비교한 결과가 참(1,true)인지 거짓(0,false)인지 반환하는 연산자
+
+        < : a < b : 왼쪽 항의 값이 오른쪽 항의 값보다 작으면 참을 반환한다.
+        > : a > b : 왼쪽 항의 값이 오른쪽 항의 값보다 크면 참을 반환한다.
+        <= : a <= b : 왼쪽 항의 값이 오른쪽 항의 값보다 같거나 작으면 참을 반환한다.
+        >= : a >= b : 왼쪽 항의 값이 오른쪽 항의 값보다 같거나 크면 참을 반환한다.
+        == : a == b : 왼쪽 항의 값과 오른쪽 항의 값이 같을 때, 참을 반환한다.
+        != : a != b : 왼쪽 항의 값과 오른쪽 항의 값이 다를 때, 참을 반환한다.
+
+    */
+    cout << "\n\n";
+
+    int left_value = 11 + 3; //14
+    int right_value = 3; 
+    // right_value = 0 일 경우 0으로 나눌 수 없어 런타임 오류가 발생한다
+    // 오류가 발생한 지점에서 멈춤
+
+    left_value--; // 증감 연상자가 뒤에 붙으면 실행되고난 후에 출력
+    cout << "14-- : 출력 = " << left_value-- << " 메모리 = " << left_value << endl; // 출력 : 13 , 메모리 : 14
+    ++left_value; // 증감 연상자가 앞에 붙으면 계산되고난 후에 출력
+    cout << "++14 : 출력 = " << ++left_value << " 메모리 = " << left_value << endl; // 출력 : 14 , 메모리 : 14
+
+    cout << "\n";
+
+
+    cout << "14 + 3 : " << left_value + right_value << endl; // 17
+    cout << "14 - 3 : " << left_value - right_value << endl; // 11
+    cout << "14 * 3 : " << left_value * right_value << endl; // 42
+    cout << "14 / 3 : " << left_value / right_value << endl; // 4
+    cout << "14 % 3 : " << left_value % right_value << endl; // 2
+
+    cout << "\n";
+
+    cout << "14 += 3 : " << (left_value += right_value) << endl; // 17
+    cout << "14 -= 3 : " << (left_value -= right_value) << endl; // 14
+    cout << "14 *= 3 : " << (left_value *= right_value) << endl; // 42
+    cout << "14 /= 3 : " << (left_value /= right_value) << endl; // 14
+    cout << "14 %= 3 : " << (left_value %= right_value) << endl; // 2
+
+    cout << "\n";
+
+    left_value = 14;
+    addition(left_value, right_value); //17
+    subtraction(left_value, right_value); //11
+    multiplication(left_value, right_value); //42
+    division(left_value, right_value); //4
+    remain(left_value, right_value); //2
+
+    /*
+        실습.
+        고객의 나이를 입력받아서 미성년자(19세 이하)이면 true를 출력
+        성인이면 false를 출력.
+    
+        아까 입력 받은 나이를 기준으로, 주민등록증 발급 대상(20살만)이면 true를, 아니면 false를 출력.    
+    
+        + 아홉수(1의 자리가 9인 수)인지 확인해서 true, false를 출력
+    */
+
+    cout << "\n\n";
+
+    int yourAge;
+    cout << "고객의 나이를 입력하세요 : " ;
+    cin >> yourAge;
+
+    cout << boolalpha; // 관계를 true, false로 표시해준다.
+    cout << "미성년자 인가요? : "<< (yourAge <= 19) << endl;
+    cout << "주민등록증 발급 대상인가요? : " << (yourAge == 20) << endl;
+    cout << noboolalpha; // boolalpha 를 no 해준다.
+    cout << "아홉수 인가요? : " << ((yourAge % 10) == 9) << endl;
+
 }
+
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
 // 프로그램 디버그: <F5> 키 또는 [디버그] > [디버깅 시작] 메뉴
