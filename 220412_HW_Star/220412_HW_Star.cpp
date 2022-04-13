@@ -223,6 +223,22 @@ int main()
 
 		cout << endl;
 	}
+
+	int MAX_LINE = 5;
+
+	for (int line = -MAX_LINE + 1; line < MAX_LINE; line++)
+	{
+		for (int space = 0; space < abs(line); space++)
+		{
+			cout << "-";
+		}
+		for (int star = 0; star < (MAX_LINE - abs(line) - 1) * 2 + 1; star++)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+	cout << endl;
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
