@@ -27,18 +27,18 @@ int main()
 			4. system(cls);
 
 
+	 
 	*/
-
 
 	// 움직이는 좌표 지정
 
 	srand(time(NULL));
-	int map[10][10] = { 0, };
+	int map[20][20] = { 0, };
 	int player_x = 0;
 	int player_y = 0;
 	//int escape_x = 0;
 	//int escape_y = 0;
-	char input_key = 0;
+    int input_key = 0;
 
 
 	// 랜덤으로 플레이어 위치 10x10 에 생성
@@ -53,12 +53,24 @@ int main()
 	
 	// 탈출구가 0,0 제외, 1,0 또는 0,1 도 가능해야 한다. 
 	
+
+	// 가짜 탈출구
+
+	int fake_x = rand() % 10;
+	int fake_y = rand() % 10;
+
 	while (escape_x == 0 && escape_y == 0)
 	{
 			escape_x = rand() % 10 ;
 			escape_y = rand() % 10 ;
 	}
 	
+	while (fake_x == 0 && fake_y == 0)
+	{
+		fake_y = rand() % 10;
+		fake_x = rand() % 10;
+	}
+
 	while (true)
 	{
 		system("cls");
@@ -74,11 +86,16 @@ int main()
 
 				else if (i == escape_x && j == escape_y)
 					cout << "◎";
+				
+				else if (i == fake_x && j == fake_y)
+					cout << "◎";
 
 				else
 					cout << "○";
 			}
 			cout << endl;
+
+
 		}
 		
 
@@ -90,7 +107,7 @@ int main()
 		switch (_getch())
 		{
 		case 119: //w
-			if (player_x > 0)
+			if (player_x > 0 )
 			{
 				player_x -= 1;
 			}
@@ -117,7 +134,7 @@ int main()
 			break;
 		}
 
-		if ((player_x == escape_x)&&(player_y == escape_y))
+		if ((player_x == escape_x) && (player_y == escape_y))
 		{
 			system("cls");
 			cout << endl;
@@ -127,7 +144,22 @@ int main()
 			cout << " #      #      #      ######  #   #  " << endl;
 			cout << " #####  #####  #####  #    #  #   #  " << endl;
 			break;
+
 		}
+
+		else if ((player_x == fake_x) && (player_y == fake_y))
+		{
+			system("cls");
+			cout << " #####    ##    #   ##  #####   #  " << endl;
+			cout << " #       #  #   # ##    #       #  " << endl;
+			cout << " #####  #    #  ##      #####   #  " << endl;
+			cout << " #      ######  # ##    #          " << endl;
+			cout << " #      #    #  #   ##  #####   #  " << endl;
+			break;
+		}
+
+
+		
 		
 
 		
