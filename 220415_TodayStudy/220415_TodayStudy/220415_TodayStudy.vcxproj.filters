@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="0414_탈출게임_shj.cpp">
+    <ClCompile Include="220415_TodayStudy.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

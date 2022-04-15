@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{7abe46c4-bb05-441f-9d29-0984a6ac594f}</ProjectGuid>
-    <RootNamespace>EscapeGame</RootNamespace>
+    <ProjectGuid>{d67dcfc3-c270-4e04-8a4b-1d694417c86e}</ProjectGuid>
+    <RootNamespace>My220415ReviewEscapeUpgrade</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="EscapeGame.cpp" />
+    <ClCompile Include="220415_ReviewEscapeUpgrade.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
