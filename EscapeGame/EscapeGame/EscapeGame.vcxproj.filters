@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="220414_EscapeGame.cpp">
+    <ClCompile Include="EscapeGame.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
